@@ -1,0 +1,22 @@
+{
+  "name": "second-hackathon",
+  "version": "1.0.0",
+  "description": "second-hackathon",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "mustak",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongodb": "^4.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
