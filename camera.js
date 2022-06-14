@@ -7,11 +7,6 @@ router.post('/', async (req, res) => {
     const data = req.body;
     console.log(data);
     const result = await createCamera(data);
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header('cors', '*');
-    res.setHeader('Access-Control-Allow-Origin', '*')
-    res.set('cors', '*');
-    res.set('request-mode', 'no-cors');
     res.send(result);
 })
 
