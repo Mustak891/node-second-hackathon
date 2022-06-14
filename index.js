@@ -10,11 +10,7 @@ dotenv.config();
 
 const PORT = process.env.PORT;
 
-app.use(cors({ origin: 'https://second-hackathon.netlify.app',
- credentials: true, 
- methods: 'GET,POST,PUT,DELETE', 
- allowedHeaders: 'Content-Type, Authorization', }));
-
+app.use(cors({ origin: 'https://second-hackathon.netlify.app'}));
 
 app.use(express.json());
 
