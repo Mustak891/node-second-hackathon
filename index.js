@@ -10,16 +10,11 @@ dotenv.config();
 
 const PORT = process.env.PORT;
 
-app.use(cors({ origin: 'https://second-hackathon.netlify.app' }));
+app.use(cors({ origin: 'https://second-hackathon.netlify.app',
+ credentials: true, 
+ methods: 'GET,POST,PUT,DELETE', 
+ allowedHeaders: 'Content-Type, Authorization', }));
 
-app.use( function (req, res, next) {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-    res.setHeader('Access-Control-Allow-Credentials', true);
-    res.send('cors problem solved');
-    next();
-} )
 
 app.use(express.json());
 
