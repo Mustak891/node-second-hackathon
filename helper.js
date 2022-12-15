@@ -1,7 +1,7 @@
 import { client } from './index.js';
 
 export async function createCamera(data) {
-    return await client.db('B33WD').collection('camera').insertMany(data);
+    return await client.db('B33WD').collection('camera').insertOne(data);
 }
 
 export async function getAllCamera() {
